@@ -1,0 +1,121 @@
+.wrapper
+{
+    width: 360px;
+    height: 379px;
+    border-radius: 4px;  
+    border: 1px solid #171A1F12; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper h1{
+    font-size:25px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    justify-content: center;
+    align-items: center;
+      text-align: center;
+
+
+}
+.wrapper input
+{
+    width: 299px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #9095a1;
+    font-weight: 400;
+}
+
+.input_phone
+{
+    padding-left: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Manrope', sans-serif;
+    margin-top: 35px;
+}
+.text_please
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #A0A0A0;
+    margin-top: 12px;
+    text-align: center;
+   
+}
+.text_passwordless
+{
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 22px;
+   font-family: 'Manrope', sans-serif;
+   color: #565D6D;
+   text-align: center;
+    margin-top: 12px;
+
+}
+.text_dont_have_account
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Manrope', sans-serif;
+    color: #565D6D;
+    margin-top: 45px;
+}
+.link_sign_up
+{
+    color: #007AFF;
+    text-decoration: none;
+}
+.back
+{
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    color: #171A1F;
+}
+.back a
+{
+    text-decoration: none;
+    color: #171A1F;
+    size:12px
+}
+.back-link {
+    
+  display: flex;
+  align-items: center;  
+  gap: 4px;             
+  text-decoration: none;
+  color: black;
+    font-size: 12px;
+}
+
+.icon {
+  font-size: 20px; 
+}
+.logincontainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+.button_next
+{
+  width: 300px;
+  height: 38px;
+  background-color: #006AFF;
+  size: 13px;
+  font-weight: 400;
+  font-family: 'Manrope', sans-serif;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+ margin-top: 30px;
+}
+
+
