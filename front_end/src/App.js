@@ -1,14 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Page/login_form/login";
+import logo from './logo.svg';
+import './App.css';
+import AppRouter from "./Router"; 
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-      </Routes>
-    </Router>
+     <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
-
 export default App;

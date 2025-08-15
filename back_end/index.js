@@ -13,12 +13,13 @@ app.post("/createAccessCode", (req, res) => {
   console.log("Generated code:", code);
   res.json({ success: true, code }); 
 });
+
 // verify OTP
 app.post("/validateAccessCode", (req, res) => {
   const { phoneNumber, accessCode } = req.body;
   console.log("Verify for:", phoneNumber, "with code:", accessCode);
-
   res.json({ success: true, role: "student" });
 });
+
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

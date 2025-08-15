@@ -13,7 +13,7 @@
 
 # Firebase key
 back_end/serviceAccountKey.json
-
+.env
 # misc
 .DS_Store
 .env.local
