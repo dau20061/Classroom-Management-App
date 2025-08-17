@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { GoBell } from "react-icons/go";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 import "./css.css";
 
 export default function Teacher() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="container">
       <div className="sidebar">
@@ -25,20 +29,30 @@ export default function Teacher() {
         </header>
 
         <section className="content">
+          <h2>Manage Students</h2>
           <div className="content-header">
-            <h2>Manage Students</h2>
             <div className="actions">
               <p>4 Students</p>
-              <button className="add-btn">+ Add Student</button>
-              <input type="text" placeholder="Filter" className="filter-input" />
+              <button className="add-btn" onClick={() => setShowModal(true)}>
+                + Add Student
+              </button>
+              <div className="filter-input-wrapper">
+                <CiSearch className="filter-icon" />
+                <input
+                  type="text"
+                  placeholder="Filter"
+                  className="filter-input"
+                />
+              </div>
             </div>
           </div>
+
           <table className="student-table">
-            <thead>
+            <thead className="thead">
               <tr>
                 <th>Student Name</th>
                 <th>Email</th>
-                <th>Status</th>
+                <th className="status_thead">Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -47,8 +61,8 @@ export default function Teacher() {
                 (name, idx) => (
                   <tr key={idx}>
                     <td>{name}</td>
-                    <td>123@gmail.com</td>
-                    <td>
+                    <td className="email">123@gmail.com</td>
+                    <td className="status">
                       <span className="status active">Active</span>
                     </td>
                     <td>
@@ -62,6 +76,53 @@ export default function Teacher() {
           </table>
         </section>
       </div>
+
+      {showModal && (
+        <div
+          className="modal-overlay"
+          onClick={() => setShowModal(false)} 
+        >
+          <div
+            className="modal"
+            onClick={(e) => e.stopPropagation()} 
+          >
+            <h2 className="modal-title">Create Student</h2>
+            <form className="modal-form">
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Student Name</label>
+                  <input type="text" />
+                </div>
+                <div className="form-group">
+                  <label>Phone Number</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Email Address</label>
+                  <input type="email" />
+                </div>
+                <div className="form-group">
+                  <label>Role</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group full">
+                  <label>Address</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div className="modal-actions">
+                <button type="submit" className="create-btn">
+                  Create
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
