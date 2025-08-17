@@ -9,3 +9,9 @@ export const createAccessCode = (phoneNumber) =>
 
 export const validateAccessCode = (phoneNumber, accessCode) =>
   API.post("/validateAccessCode", { phoneNumber, accessCode });
+
+export const addStudent = (name, phone, email, role, address) =>
+  API.post("/addStudent", { name, phone, email, role, address });
+
+export const getStudents = () => API.get("/students");
+ 
