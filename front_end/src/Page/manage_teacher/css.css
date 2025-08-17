@@ -1,0 +1,175 @@
+/* Container chia 2 cột */
+.container {
+  display: flex;
+  background: white;
+  width: 1451px;
+  height: 975px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  border-right: 1px solid #ddd;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.logo {
+  width: 160px;
+  height: 60px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-btn {
+  padding: 12px 20px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Manrope', sans-serif;
+  color: #2C7BE5;
+}
+
+.menu-btn:hover {
+  background: #f0f0f0;
+}
+
+.menu-btn.active {
+  background: #e6f0ff;
+  border-left: 3px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.icon-link {
+  font-size: 24px;
+  color: gray;
+}
+.icon
+{
+    font-size: 34px;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+.content-header {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.content-header h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.actions p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #3b82f6;
+  background: white;
+  color: #3b82f6;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 660px;
+
+}
+
+.add-btn:hover {
+  background: #e6f0ff;
+}
+
+.filter-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 129px;
+  height: 39px;
+}
+
+/* Table */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.student-table th,
+.student-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.status.active {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -49,7 +49,7 @@ export default function Login() {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
-            <button className="button_next" onClick={sendCode}>
+            <button className="btn_next" onClick={sendCode}>
               Next
             </button>
             <p className="text_passwordless">
@@ -82,7 +82,7 @@ export default function Login() {
                 onChange={(e) => setCode(e.target.value)}
               />
             </div>
-            <button className="button_next" onClick={verifyCode}>
+            <button className="btn_next" onClick={verifyCode}>
               Submit
             </button>
             <p className="text_dont_have_account">
