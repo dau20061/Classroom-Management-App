@@ -94,6 +94,14 @@ npm start
 
 ---
 
+### 4️⃣ Nhận OTP của Email và SMS
+
+> Nhận OTP của SMS: thông qua firestore của tool firebase chọn accessCodes để hiển thị mã OTP
+
+> Nhận OTP của Email: thông qua nodemailer, sẽ được gửi trực tiếp vào email mà đã đăng kí cho học sinh đó
+
+---
+
 ### 💡 Lưu ý
 
 * Đảm bảo backend đang chạy trước khi mở frontend để các API hoạt động bình thường.
@@ -101,3 +109,23 @@ npm start
 * Có thể thay đổi port nếu cần bằng cách chỉnh file `index.js` hoặc `.env`.
 
 ![Trang đăng nhập bằng số điện thoại](./front_end/src/images/Login_numberphone.png)
+<div align="center"><i>Trang đăng nhập bằng số điện thoại</i></div>
+
+![Trang đăng xác thực mã OTP thông qua SMS](./front_end/src/images/Phone_verification.png)
+<div align="center"><i>Trang đăng xác thực mã OTP thông qua SMS</i></div>
+
+![Trang quản lí học sinh](./front_end/src/images/Manage_student.png)
+<div align="center"><i>Trang quản lí học sinh từ tài khoản giáo viên</i></div>
+
+![Trang thêm học sinh vào danh sách](./front_end/src/images/CreateStudent.png)
+<div align="center"><i>Trang thêm học sinh vào danh sách</i></div>
+
+![Trang chỉnh sửa thông tin học sinh](./front_end/src/images/Edit_profile_student.png)
+<div align="center"><i>Trang chỉnh sửa thông tin học sinh</i></div>
+
+![Trang đăng nhập bằng email học sinh](./front_end/src/images/Login_email.png)
+<div align="center"><i></i>Trang đăng nhập bằng email học sinh</div>
+
+![Trang xác thực OTP được gửi qua email](./front_end/src/images/Email_verification.png)
+<div align="center"><i></i>Trang xác thực OTP được gửi qua email</div>
+
