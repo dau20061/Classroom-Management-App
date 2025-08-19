@@ -100,6 +100,4 @@ npm start
 * Kiểm tra `.env` có đúng thông tin email và các biến môi trường khác để chức năng OTP/email hoạt động.
 * Có thể thay đổi port nếu cần bằng cách chỉnh file `index.js` hoặc `.env`.
 
-```
-![Trang đăng nhập bằng số điện thoại](../Classroom-Management-App//images/Login_numberphone.png)
-
+![Trang đăng nhập bằng số điện thoại](./front_end/src/images/Login_numberphone.png)
