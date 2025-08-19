@@ -1,89 +1,92 @@
- # Project Structure
+## 🚀 Project Structure
 
-## Backend (back_end)
-- index.js: Start Express server, configure routes  
-- firebase.js, serviceAccountKey.json: Connect to Firebase  
-- .env: Environment variables  
-- routes/student.js: Student management (CRUD)  
-- routes/emailOTP.js: Email OTP verification, send mail, reset password  
-- routes/otp.js: Other OTP verification  
-- package.json, package-lock.json: Dependency management  
+### Backend (back_end)
+- `index.js`: Starts the Express server and configures routes  
+- `firebase.js`, `serviceAccountKey.json`: Connects to Firebase  
+- `.env`: Environment variables  
+- `routes/student.js`: Student management (CRUD)  
+- `routes/emailOTP.js`: Email OTP verification, sending emails, password reset  
+- `routes/otp.js`: Other OTP verification  
+- `package.json`, `package-lock.json`: Library management  
 
-## Frontend (front_end)
-- public/: Static files (index.html, favicon, ...)  
-- src/App.js, src/index.js: Initialize React app  
-- src/services/api.js: Communicate with backend via axios  
-- src/component/: Shared components (setupaccount.js, studentform.js, ...)  
-- src/Page/login_form/: Login page  
-- src/Page/manage_teacher/: Teacher management  
-- src/Page/verivyOTP/verifyotp.jsx: Email OTP verification  
-- src/Router/index.jsx: React routing management  
-- src/App.css, src/index.css: Style files  
-- package.json, package-lock.json: Frontend dependencies  
+### Frontend (front_end)
+- `public/`: Static files (index.html, favicon, etc.)  
+- `src/App.js`, `src/index.js`: Initializes the React application  
+- `src/services/api.js`: Communicates with backend via Axios  
+- `src/component/`: Shared components (`setupaccount.js`, `studentform.js`, etc.)  
+- `src/Page/login_form/`: Login pages  
+- `src/Page/manage_teacher/`: Teacher management  
+- `src/Page/verivyOTP/verifyotp.jsx`: Email OTP verification  
+- `src/Router/index.jsx`: React routing management  
+- `src/App.css`, `src/index.css`: Styling files  
+- `package.json`, `package-lock.json`: Frontend dependencies  
 
-## Root
-- README.md: Project information  
-- package.json, package-lock.json: Common dependencies
-````markdown
+### Root
+- `README.md`: Project information  
+- `package.json`, `package-lock.json`: Root-level dependencies
 
-## 🚀 How to Run the Project
+---
+## 🚀 Project Run Guide
 
-To run this project, follow these steps:
+Follow the steps below to run this project:
 
 ---
 
-
 ### 1️⃣ Backend
 
-**1.1. Go to the backend folder:**
+**1.1. Navigate to the backend folder:**
 ```bash
 cd back_end
-```
+````
 
-**1.2. Install dependencies:**
+**1.2. Install required packages:**
+
 ```bash
 npm install
 ```
 
 **1.3. Configure environment variables**
-Create a `.env` file if it doesn't exist and add the required variables, for example:
+Create a `.env` file if it doesn’t exist and fill in the necessary environment variables, for example:
+
 ```env
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
 # Add other variables if needed
 ```
 
-**1.4. Start the backend server:**
+**1.4. Run the backend server:**
+
 ```bash
 npm run dev
 ```
 
-> ⚡ Backend runs at: `http://localhost:5000`
+> ⚡ Backend runs by default at: `http://localhost:5000`
 
 ---
 
-
 ### 2️⃣ Frontend
 
-**2.1. Go to the frontend folder:**
+**2.1. Navigate to the frontend folder:**
+
 ```bash
 cd front_end
 ```
 
-**2.2. Install dependencies:**
+**2.2. Install required packages:**
+
 ```bash
 npm install
 ```
 
-**2.3. Start the React app:**
+**2.3. Run the React application:**
+
 ```bash
 npm start
 ```
 
-> ⚡ Frontend runs at: `http://localhost:3000`
+> ⚡ Frontend runs by default at: `http://localhost:3000`
 
 ---
-
 
 ### 3️⃣ Access the Application
 
@@ -92,41 +95,45 @@ npm start
 
 ---
 
+### 4️⃣ Receiving OTP via Email and SMS
 
-### 4️⃣ Receive OTP via Email and SMS
+> **SMS OTP:** Check in Firestore under `accessCodes` to see the OTP.
 
-> Receive SMS OTP: Check the `accessCodes` collection in Firebase Firestore to view the OTP code.
-
-> Receive Email OTP: The OTP will be sent directly to the student's registered email via Nodemailer.
+> **Email OTP:** Sent directly to the student’s registered email using Nodemailer.
 
 ---
 
-
 ### 💡 Notes
 
-* Make sure the backend is running before starting the frontend so that the APIs work properly.
-* Check that `.env` contains the correct email and other environment variables for OTP/email features to work.
-* You can change the port if needed by editing `index.js` or `.env`.
+* Make sure the backend is running before opening the frontend for API requests to work properly.
+* Verify that `.env` contains the correct email credentials and other necessary environment variables for OTP/email functionality.
+* You can change the ports if needed by modifying `index.js` or `.env`.
+---
 
 
-![Trang đăng nhập bằng số điện thoại](./front_end/src/images/Login_numberphone.png)
-<div align="center"><i>Login page with phone number</i></div>
+![Login page using phone number](./front_end/src/images/Login_numberphone.png)
+<div align="center"><i>Login page using phone number</i></div>
 
-![Trang đăng xác thực mã OTP thông qua SMS](./front_end/src/images/Phone_verification.png)
-<div align="center"><i>Page to authenticate OTP code via SMS</i></div>
+![OTP verification page via SMS](./front_end/src/images/Phone_verification.png)
+<div align="center"><i>OTP verification page via SMS</i></div>
 
-![Trang quản lí học sinh](./front_end/src/images/Manage_student.png)
-<div align="center"><i>Student management page from teacher account</i></div>
+![Student management page](./front_end/src/images/Manage_student.png)
+<div align="center"><i>Student management page for teacher accounts</i></div>
 
-![Trang thêm học sinh vào danh sách](./front_end/src/images/CreateStudent.png)
-<div align="center"><i>Add student to list page</i></div>
+![Add student to the list page](./front_end/src/images/CreateStudent.png)
+<div align="center"><i>Add student to the list page</i></div>
 
-![Trang chỉnh sửa thông tin học sinh](./front_end/src/images/Edit_profile_student.png)
-<div align="center"><i>Student information editing page</i></div>
+![Edit student profile page](./front_end/src/images/Edit_profile_student.png)
+<div align="center"><i>Edit student profile page</i></div>
 
-![Trang đăng nhập bằng email học sinh](./front_end/src/images/Login_email.png)
-<div align="center"><i></i>Student email login page</div>
+![Login page using student email](./front_end/src/images/Login_email.png)
+<div align="center"><i>Login page using student email</i></div>
 
-![Trang xác thực OTP được gửi qua email](./front_end/src/images/Email_verification.png)
-<div align="center"><i></i>OTP authentication page sent via email</div>
+![OTP verification page via email](./front_end/src/images/Email_verification.png)
+<div align="center"><i>OTP verification page sent via email</i></div>
+
+
+
+
+
 
