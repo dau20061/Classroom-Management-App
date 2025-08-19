@@ -101,3 +101,5 @@ npm start
 * Có thể thay đổi port nếu cần bằng cách chỉnh file `index.js` hoặc `.env`.
 
 ```
+![Trang đăng nhập bằng số điện thoại](images/Login_numberphone.png)
+
