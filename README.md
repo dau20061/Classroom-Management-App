@@ -109,24 +109,24 @@ npm start
 * You can change the port if needed by editing `index.js` or `.env`.
 
 
-![Login with phone number page](./front_end/src/images/Login_numberphone.png)
-<div align="center"><i>Login with phone number page</i></div>
+![Trang đăng nhập bằng số điện thoại](./front_end/src/images/Login_numberphone.png)
+<div align="center"><i>Login page with phone number</i></div>
 
-![OTP verification via SMS page](./front_end/src/images/Phone_verification.png)
-<div align="center"><i>OTP verification via SMS page</i></div>
+![Trang đăng xác thực mã OTP thông qua SMS](./front_end/src/images/Phone_verification.png)
+<div align="center"><i>Page to authenticate OTP code via SMS</i></div>
 
-![Student management page](./front_end/src/images/Manage_student.png)
-<div align="center"><i>Student management page (teacher account)</i></div>
+![Trang quản lí học sinh](./front_end/src/images/Manage_student.png)
+<div align="center"><i>Student management page from teacher account</i></div>
 
-![Add student to list page](./front_end/src/images/CreateStudent.png)
+![Trang thêm học sinh vào danh sách](./front_end/src/images/CreateStudent.png)
 <div align="center"><i>Add student to list page</i></div>
 
-![Edit student information page](./front_end/src/images/Edit_profile_student.png)
-<div align="center"><i>Edit student information page</i></div>
+![Trang chỉnh sửa thông tin học sinh](./front_end/src/images/Edit_profile_student.png)
+<div align="center"><i>Student information editing page</i></div>
 
-![Login with student email page](./front_end/src/images/Login_email.png)
-<div align="center"><i>Login with student email page</i></div>
+![Trang đăng nhập bằng email học sinh](./front_end/src/images/Login_email.png)
+<div align="center"><i></i>Student email login page</div>
 
-![OTP verification sent via email page](./front_end/src/images/Email_verification.png)
-<div align="center"><i>OTP verification sent via email page</i></div>
+![Trang xác thực OTP được gửi qua email](./front_end/src/images/Email_verification.png)
+<div align="center"><i></i>OTP authentication page sent via email</div>
 
