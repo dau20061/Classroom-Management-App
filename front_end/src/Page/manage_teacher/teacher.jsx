@@ -7,7 +7,7 @@ import {
   createStudent,
   deleteStudent,
   updateStudent,
-} from "../../component/studentform"; // import API
+} from "../../component/studentform";
 import "./css.css";
 
 export default function Teacher() {

@@ -8,24 +8,38 @@ export default function Login() {
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
   const [step, setStep] = useState(1);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const sendCode = async (e) => {
     e.preventDefault();
     if (!phone) return alert("Please enter phone number");
-    await createAccessCode(phone);
-    setStep(2);
+    try {
+      await createAccessCode(phone);
+      setStep(2);
+      setError("");
+    } catch (err) {
+      setError("Failed to send code. Please try again.");
+    }
   };
 
   const verifyCode = async (e) => {
     e.preventDefault();
     if (!code) return alert("Please enter code");
-    const res = await validateAccessCode(phone, code);
-    const role = res.data.role;
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("role", role);
-    if (role === "instructor") navigate("/instructor");
-    else navigate("/student");
+
+    try {
+      const res = await validateAccessCode(phone, code);
+      if (res.data.success) {
+        const role = res.data.role;
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("role", role);
+        navigate("/teacher");
+      } else {
+        setError("Invalid code. Please try again.");
+      }
+    } catch (err) {
+      setError("Invalid code. Please try again.");
+    }
   };
 
   return (
@@ -52,6 +66,7 @@ export default function Login() {
             <button className="btn_next" onClick={sendCode}>
               Next
             </button>
+            {error && <p className="error">{error}</p>}
             <p className="text_passwordless">
               Passwordless authentication methods
             </p>
@@ -85,6 +100,7 @@ export default function Login() {
             <button className="btn_next" onClick={verifyCode}>
               Submit
             </button>
+            {error && <p className="error">{error}</p>}
             <p className="text_dont_have_account">
               Code not receive?
               <a href="#" onClick={sendCode} className="link_sign_up">

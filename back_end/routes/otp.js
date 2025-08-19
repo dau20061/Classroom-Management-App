@@ -10,7 +10,7 @@ router.post("/createAccessCode", async (req, res) => {
   const { phoneNumber } = req.body;
   console.log("Received phone number:", phoneNumber);
   if (!vnPhoneRegex.test(phoneNumber)) {
-    return res.status(400).json({ success: false, message: "Số điện thoại không hợp lệ" });
+    return res.status(400).json({ success: false, message: "Invalid phone number" });
   }
   const code = Math.floor(100000 + Math.random() * 900000).toString();
   try {
@@ -53,5 +53,8 @@ router.post("/validateAccessCode", async (req, res) => {
   }
   res.status(400).json({ success: false, message: "Incorrect or expired OTP code" });
 });
+
+
+
 
 module.exports = router;
