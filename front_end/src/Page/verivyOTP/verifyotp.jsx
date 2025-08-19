@@ -52,7 +52,7 @@ export default function EmailAuth() {
         className="back-link"
         onClick={(e) => {
           e.preventDefault();
-          setStep(1); // luôn về step 1
+          setStep(1); 
         }}
       >
         <GoArrowLeft className="icon" /> Back
